@@ -16,7 +16,6 @@
 /* Components - Éléments réutilisables */
 @import 'components/buttons.css';
 @import 'components/cards.css';
-@import 'components/forms.css';
 @import 'components/alerts.css';
 
 /* Utilities - Classes d'aide et accessibilité */
