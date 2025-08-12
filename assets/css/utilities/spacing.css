@@ -13,14 +13,3 @@
 }
 .chip.active, .chip:hover { border-color: var(--color-primary); color: var(--color-text); }
 
-/* ===== Newsletter ===== */
-.newsletter .box {
-  display: grid; gap: var(--space-4);
-  grid-template-columns: 1fr;
-  background: #0b0f14; border: var(--border-soft);
-  border-radius: var(--radius-lg);
-  padding: var(--space-5);
-}
-@media (min-width: 640px) { .newsletter .box { grid-template-columns: 1.4fr 1fr; align-items: center; } }
-.box-form { display: grid; gap: var(--space-3); grid-template-columns: 1fr auto; align-items: center; }
-.box-form input { min-width: 200px; }

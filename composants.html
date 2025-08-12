@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Showcase des composants CSS — Blog IA</title>
+  <meta name="description" content="Démonstration visuelle de tous les composants CSS du design system Blog IA : boutons, cartes, alertes, typographie et plus.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/main.css" />
+  <style>
+    /* Styles spécifiques au showcase */
+    .showcase-nav {
+      position: sticky;
+      top: 60px;
+      background: var(--color-bg-secondary);
+      border: var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+      margin-bottom: var(--space-6);
+      z-index: 50;
+    }
+    .showcase-nav ul {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+    .showcase-nav a {
+      display: block;
+      padding: var(--space-2) var(--space-3);
+      background: var(--color-bg);
+      border: var(--border-soft);
+      border-radius: var(--radius-sm);
+      color: var(--color-text-secondary);
+      text-decoration: none;
+      font-size: var(--fs-1);
+      font-family: 'Poppins', sans-serif;
+      transition: all 0.2s ease;
+    }
+    .showcase-nav a:hover {
+      color: var(--color-primary);
+      border-color: var(--color-primary);
+    }
+    .showcase-section {
+      margin-bottom: var(--space-8);
+      padding-bottom: var(--space-6);
+      border-bottom: var(--border-soft);
+    }
+    .showcase-section:last-child {
+      border-bottom: none;
+    }
+    .showcase-grid {
+      display: grid;
+      gap: var(--space-4);
+      margin-top: var(--space-4);
+    }
+    .showcase-item {
+      background: var(--color-bg-secondary);
+      border: var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: var(--space-4);
+    }
+    .showcase-item h4 {
+      font-family: 'Poppins', sans-serif;
+      font-size: var(--fs-2);
+      color: var(--color-text);
+      margin: 0 0 var(--space-2);
+    }
+    .showcase-item .code {
+      background: var(--color-bg);
+      border: 1px solid #2d333b;
+      border-radius: var(--radius-sm);
+      padding: var(--space-2) var(--space-3);
+      margin-top: var(--space-3);
+      font-family: 'Courier New', monospace;
+      font-size: var(--fs-1);
+      color: var(--color-text-secondary);
+      overflow-x: auto;
+    }
+    .color-swatch {
+      width: 60px;
+      height: 60px;
+      border-radius: var(--radius-sm);
+      border: var(--border-soft);
+      margin-bottom: var(--space-2);
+    }
+    .spacing-demo {
+      background: var(--color-primary);
+      height: 20px;
+      margin-bottom: var(--space-2);
+    }
+    @media (min-width: 640px) {
+      .showcase-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (min-width: 1024px) {
+      .showcase-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+  </style>
+</head>
+<body class="page-composants">
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- Header container -->
+  <div id="header-container"></div>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="section hero">
+      <div class="container">
+        <h1>Showcase des composants CSS</h1>
+        <p class="lead">
+          Démonstration visuelle du design system Blog IA : tous les composants, 
+          utilitaires et variables CSS disponibles pour le développement.
+        </p>
+      </div>
+    </section>
+
+    <!-- Navigation interne -->
+    <div class="container">
+      <nav class="showcase-nav" aria-label="Navigation des composants">
+        <ul>
+          <li><a href="#design-system">Design System</a></li>
+          <li><a href="#typographie">Typographie</a></li>
+          <li><a href="#boutons">Boutons</a></li>
+          <li><a href="#cartes">Cartes</a></li>
+          <li><a href="#alertes">Alertes</a></li>
+          <li><a href="#filtres">Filtres</a></li>
+          <li><a href="#layout">Layout</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container">
+      
+      <!-- Section Design System -->
+      <section id="design-system" class="showcase-section">
+        <h2>Design System</h2>
+        <p>Variables CSS fondamentales du système de design Blog IA.</p>
+
+        <div class="showcase-grid">
+          <!-- Palette couleurs -->
+          <div class="showcase-item">
+            <h4>Palette de couleurs</h4>
+            <div style="display: grid; gap: var(--space-2);">
+              <div style="display: flex; align-items: center; gap: var(--space-2);">
+                <div class="color-swatch" style="background-color: var(--color-bg);"></div>
+                <div>
+                  <strong>Background</strong><br>
+                  <span class="code">--color-bg: #0D1117</span>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--space-2);">
+                <div class="color-swatch" style="background-color: var(--color-bg-secondary);"></div>
+                <div>
+                  <strong>Background Secondary</strong><br>
+                  <span class="code">--color-bg-secondary</span>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--space-2);">
+                <div class="color-swatch" style="background-color: var(--color-primary);"></div>
+                <div>
+                  <strong>Primary</strong><br>
+                  <span class="code">--color-primary: #3B82F6</span>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--space-2);">
+                <div class="color-swatch" style="background-color: var(--color-secondary);"></div>
+                <div>
+                  <strong>Secondary</strong><br>
+                  <span class="code">--color-secondary: #06B6D4</span>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--space-2);">
+                <div class="color-swatch" style="background-color: var(--color-success);"></div>
+                <div>
+                  <strong>Success</strong><br>
+                  <span class="code">--color-success: #22C55E</span>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--space-2);">
+                <div class="color-swatch" style="background-color: var(--color-alert);"></div>
+                <div>
+                  <strong>Alert</strong><br>
+                  <span class="code">--color-alert: #E11D48</span>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--space-2);">
+                <div class="color-swatch" style="background-color: var(--color-info);"></div>
+                <div>
+                  <strong>Info</strong><br>
+                  <span class="code">--color-info: #38BDF8</span>
+                </div>
+              </div>
+              <div style="display: flex; align-items: center; gap: var(--space-2);">
+                <div class="color-swatch" style="background-color: var(--color-warn);"></div>
+                <div>
+                  <strong>Warning</strong><br>
+                  <span class="code">--color-warn: #F59E0B</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Espacement -->
+          <div class="showcase-item">
+            <h4>Espacement</h4>
+            <div style="display: grid; gap: var(--space-2);">
+              <div>
+                <div class="spacing-demo" style="width: var(--space-1);"></div>
+                <span class="code">--space-1: 4px</span>
+              </div>
+              <div>
+                <div class="spacing-demo" style="width: var(--space-2);"></div>
+                <span class="code">--space-2: 8px</span>
+              </div>
+              <div>
+                <div class="spacing-demo" style="width: var(--space-3);"></div>
+                <span class="code">--space-3: 12px</span>
+              </div>
+              <div>
+                <div class="spacing-demo" style="width: var(--space-4);"></div>
+                <span class="code">--space-4: 16px</span>
+              </div>
+              <div>
+                <div class="spacing-demo" style="width: var(--space-5);"></div>
+                <span class="code">--space-5: 24px</span>
+              </div>
+              <div>
+                <div class="spacing-demo" style="width: var(--space-6);"></div>
+                <span class="code">--space-6: 32px</span>
+              </div>
+              <div>
+                <div class="spacing-demo" style="width: var(--space-7);"></div>
+                <span class="code">--space-7: 48px</span>
+              </div>
+              <div>
+                <div class="spacing-demo" style="width: var(--space-8);"></div>
+                <span class="code">--space-8: 72px</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Rayons de bordure -->
+          <div class="showcase-item">
+            <h4>Rayons de bordure</h4>
+            <div style="display: grid; gap: var(--space-3);">
+              <div>
+                <div style="width: 60px; height: 40px; background: var(--color-primary); border-radius: var(--radius-sm); margin-bottom: var(--space-2);"></div>
+                <span class="code">--radius-sm: 6px</span>
+              </div>
+              <div>
+                <div style="width: 60px; height: 40px; background: var(--color-primary); border-radius: var(--radius-md); margin-bottom: var(--space-2);"></div>
+                <span class="code">--radius-md: 10px</span>
+              </div>
+              <div>
+                <div style="width: 60px; height: 40px; background: var(--color-primary); border-radius: var(--radius-lg); margin-bottom: var(--space-2);"></div>
+                <span class="code">--radius-lg: 16px</span>
+              </div>
+              <div>
+                <div style="width: 60px; height: 40px; background: var(--color-primary); border-radius: var(--radius-pill); margin-bottom: var(--space-2);"></div>
+                <span class="code">--radius-pill: 999px</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Élévations -->
+          <div class="showcase-item">
+            <h4>Élévations (box-shadow)</h4>
+            <div style="display: grid; gap: var(--space-3);">
+              <div>
+                <div style="width: 80px; height: 40px; background: var(--color-bg-secondary); box-shadow: var(--elev-1); border-radius: var(--radius-sm); margin-bottom: var(--space-2);"></div>
+                <span class="code">--elev-1</span><br>
+                <small class="muted">Légère</small>
+              </div>
+              <div>
+                <div style="width: 80px; height: 40px; background: var(--color-bg-secondary); box-shadow: var(--elev-2); border-radius: var(--radius-sm); margin-bottom: var(--space-2);"></div>
+                <span class="code">--elev-2</span><br>
+                <small class="muted">Modérée</small>
+              </div>
+              <div>
+                <div style="width: 80px; height: 40px; background: var(--color-bg-secondary); box-shadow: var(--elev-3); border-radius: var(--radius-sm); margin-bottom: var(--space-2);"></div>
+                <span class="code">--elev-3</span><br>
+                <small class="muted">Forte</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bordures -->
+          <div class="showcase-item">
+            <h4>Bordures</h4>
+            <div style="display: grid; gap: var(--space-3);">
+              <div>
+                <div style="width: 80px; height: 40px; background: var(--color-bg-secondary); border: var(--border-soft); border-radius: var(--radius-sm); margin-bottom: var(--space-2);"></div>
+                <span class="code">--border-soft</span><br>
+                <small class="muted">Subtile (6% opacity)</small>
+              </div>
+              <div>
+                <div style="width: 80px; height: 40px; background: var(--color-bg-secondary); border: var(--border-strong); border-radius: var(--radius-sm); margin-bottom: var(--space-2);"></div>
+                <span class="code">--border-strong</span><br>
+                <small class="muted">Visible (12% opacity)</small>
+              </div>
+            </div>
+          </div>
+
+          <!-- Typographie fluide -->
+          <div class="showcase-item">
+            <h4>Tailles de police fluides</h4>
+            <div style="display: grid; gap: var(--space-2);">
+              <div style="font-size: var(--fs-1);">
+                <strong>fs-1</strong> - Texte petit<br>
+                <span class="code">clamp(0.875rem, 0.8rem + 0.2vw, 1rem)</span>
+              </div>
+              <div style="font-size: var(--fs-2);">
+                <strong>fs-2</strong> - Texte base<br>
+                <span class="code">clamp(1rem, 0.95rem + 0.3vw, 1.125rem)</span>
+              </div>
+              <div style="font-size: var(--fs-3);">
+                <strong>fs-3</strong> - Titre h3<br>
+                <span class="code">clamp(1.25rem, 1.1rem + 0.6vw, 1.5rem)</span>
+              </div>
+              <div style="font-size: var(--fs-4);">
+                <strong>fs-4</strong> - Titre h2<br>
+                <span class="code">clamp(1.5rem, 1.3rem + 0.8vw, 2rem)</span>
+              </div>
+              <div style="font-size: var(--fs-5);">
+                <strong>fs-5</strong> - Titre h1<br>
+                <span class="code">clamp(2rem, 1.6rem + 1.6vw, 2.75rem)</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Section Typographie -->
+      <section id="typographie" class="showcase-section">
+        <h2>Typographie</h2>
+        <p>Hiérarchie typographique et styles de texte.</p>
+
+        <div class="showcase-grid">
+          <div class="showcase-item">
+            <h4>Hiérarchie des titres</h4>
+            <h1>Titre H1 - Principal</h1>
+            <h2>Titre H2 - Section</h2>
+            <h3>Titre H3 - Sous-section</h3>
+            <div class="code">h1, h2, h3 { font-family: 'Poppins', sans-serif; }</div>
+          </div>
+          <div class="showcase-item">
+            <h4>Styles de paragraphe</h4>
+            <p class="lead">Texte d'accroche avec classe .lead pour introduction.</p>
+            <p>Paragraphe standard avec espacement et couleur secondaire par défaut.</p>
+            <p class="muted">Texte en sourdine avec classe .muted pour informations moins importantes.</p>
+            <div class="code">.lead { font-size: clamp(1.125rem, 1rem + 0.6vw, 1.4rem); }</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Boutons -->
+      <section id="boutons" class="showcase-section">
+        <h2>Boutons</h2>
+        <p>Système complet de boutons avec variantes et tailles.</p>
+
+        <div class="showcase-grid">
+          <div class="showcase-item">
+            <h4>Variantes de couleur</h4>
+            <button class="btn btn-primary">Primary</button>
+            <button class="btn btn-secondary">Secondary</button>
+            <button class="btn btn-success">Success</button>
+            <button class="btn btn-alert">Alert</button>
+            <button class="btn btn-ghost">Ghost</button>
+            <div class="code">.btn-primary, .btn-secondary, .btn-success, .btn-alert, .btn-ghost</div>
+          </div>
+          <div class="showcase-item">
+            <h4>Tailles disponibles</h4>
+            <button class="btn btn-primary btn-sm">Small</button>
+            <button class="btn btn-primary">Normal</button>
+            <button class="btn btn-primary btn-lg">Large</button>
+            <div class="code">.btn-sm, .btn, .btn-lg</div>
+          </div>
+          <div class="showcase-item">
+            <h4>États spéciaux</h4>
+            <button class="btn btn-primary" disabled>Disabled</button>
+            <button class="btn btn-secondary" disabled>Disabled</button>
+            <div class="code">.btn[disabled] { opacity: 0.55; cursor: not-allowed; }</div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section Cartes -->
+      <section id="cartes" class="showcase-section">
+        <h2>Cartes</h2>
+        <p>Système de cartes responsive avec grille adaptative.</p>
+
+        <div class="cards">
+          <div class="card">
+            <h3>Carte exemple 1</h3>
+            <p>Contenu de la carte avec texte d'exemple pour démonstration.</p>
+            <div class="meta">Métadonnées avec classe .meta</div>
+          </div>
+          <div class="card">
+            <h3>Carte exemple 2</h3>
+            <p>Autre exemple de carte avec hover effect intégré.</p>
+            <div class="meta">Informations supplémentaires</div>
+          </div>
+          <div class="card">
+            <h3>Carte exemple 3</h3>
+            <p>Troisième carte pour démontrer la grille responsive.</p>
+            <div class="meta">Style .meta en couleur secondaire</div>
+          </div>
+        </div>
+        <div class="showcase-item" style="margin-top: var(--space-4);">
+          <div class="code">.cards { display: grid; gap: var(--space-5); }<br>@media (min-width: 640px) { .cards { grid-template-columns: repeat(2,1fr); } }<br>@media (min-width: 1024px) { .cards { grid-template-columns: repeat(3,1fr); } }</div>
+        </div>
+      </section>
+
+      <!-- Section Alertes -->
+      <section id="alertes" class="showcase-section">
+        <h2>Alertes</h2>
+        <p>Messages d'information avec 4 niveaux de priorité.</p>
+
+        <div class="alert alert-success">
+          <strong>Succès !</strong> Action réalisée avec succès. Tout s'est bien déroulé.
+        </div>
+        <div class="alert alert-info">
+          <strong>Information</strong> Message informatif pour guider l'utilisateur.
+        </div>
+        <div class="alert alert-warn">
+          <strong>Attention</strong> Avertissement important à prendre en compte.
+        </div>
+        <div class="alert alert-error">
+          <strong>Erreur</strong> Une erreur s'est produite, veuillez réessayer.
+        </div>
+        <div class="showcase-item" style="margin-top: var(--space-4);">
+          <div class="code">.alert-success, .alert-info, .alert-warn, .alert-error</div>
+        </div>
+      </section>
+
+      <!-- Section Filtres -->
+      <section id="filtres" class="showcase-section">
+        <h2>Chips & Filtres</h2>
+        <p>Système de filtres interactifs utilisé sur la page entreprises.</p>
+
+        <div class="filters" style="margin-bottom: var(--space-4);">
+          <div class="chip active" data-filter="all">Tous</div>
+          <div class="chip" data-filter="startup">Startups</div>
+          <div class="chip" data-filter="bigtech">Big Tech</div>
+          <div class="chip" data-filter="opensource">Open Source</div>
+        </div>
+        <div class="showcase-item">
+          <div class="code">.chip { background: transparent; border: 1px solid rgba(255,255,255,0.14); }<br>.chip.active, .chip:hover { border-color: var(--color-primary); }</div>
+        </div>
+      </section>
+
+      <!-- Section Layout -->
+      <section id="layout" class="showcase-section">
+        <h2>Layout & Utilitaires</h2>
+        <p>Classes d'aide pour la mise en page et l'espacement.</p>
+
+        <div class="showcase-grid">
+          <div class="showcase-item">
+            <h4>Container</h4>
+            <div style="background: var(--color-bg-secondary); padding: var(--space-2); border-radius: var(--radius-sm);">
+              <div class="container" style="background: rgba(59, 130, 246, 0.1); padding: var(--space-2); border-radius: var(--radius-sm);">
+                Contenu dans .container
+              </div>
+            </div>
+            <div class="code">.container { max-width: var(--container); margin: 0 auto; }</div>
+          </div>
+          <div class="showcase-item">
+            <h4>Section avec padding</h4>
+            <div style="background: rgba(34, 197, 94, 0.1); padding: var(--space-8) var(--space-4); border-radius: var(--radius-sm);">
+              Contenu avec .section
+            </div>
+            <div class="code">.section { padding: var(--space-8) 0; }</div>
+          </div>
+          <div class="showcase-item">
+            <h4>Grille responsive</h4>
+            <div class="row two" style="gap: var(--space-3);">
+              <div style="background: var(--color-info); padding: var(--space-3); border-radius: var(--radius-sm); color: white;">Colonne 1</div>
+              <div style="background: var(--color-warn); padding: var(--space-3); border-radius: var(--radius-sm); color: white;">Colonne 2</div>
+            </div>
+            <div class="code">.row.two { grid-template-columns: 1fr; }<br>@media (min-width: 640px) { .row.two { grid-template-columns: repeat(2,1fr); } }</div>
+          </div>
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer container -->
+  <div id="footer-container"></div>
+
+  <script src="assets/js/main.js" type="module"></script>
+</body>
+</html>
