@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog IA — TPE & Indépendants</title>
+  <meta name="description" content="Blog spécialisé sur l'IA appliquée aux TPE et indépendants : guides, outils, cas concrets.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="page-home">
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- Header container -->
+  <div id="header-container"></div>
+
+  <main id="main">
+    <!-- Hero -->
+    <section id="accueil" class="section hero">
+      <div class="container">
+        <h1>IA appliquée aux TPE — blog & cas concrets</h1>
+        <p class="lead">
+          Des guides simples, des outils actionnables et des retours d'expérience
+          pour <strong>gagner du temps</strong>, <strong>standardiser</strong> et
+          <strong>améliorer</strong> votre activité avec l'intelligence artificielle.
+        </p>
+        <div class="cta">
+          <a class="btn btn-primary btn-lg" href="#posts">Voir les derniers articles</a>
+          <a class="btn btn-secondary btn-lg" href="#contact">Demander une démo</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Use cases / Applications -->
+    <section id="applications" class="section features">
+      <div class="container">
+        <h2>Applications concrètes</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Administratif</h3>
+            <p>Relances, facturation, synthèses d’emails, comptes-rendus.</p>
+            <div class="meta">Templates & mini-agents</div>
+          </article>
+          <article class="card">
+            <h3>Commercial</h3>
+            <p>Prospection, CRM, scoring leads, scripts d’appels.</p>
+            <div class="meta">Outils low-code</div>
+          </article>
+          <article class="card">
+            <h3>Support</h3>
+            <p>FAQ, réponses types, tri prioritaire, résumés clients.</p>
+            <div class="meta">Assistants et bases de connaissances</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Latest posts -->
+    <section id="posts" class="section posts">
+      <div class="container">
+        <h2>Derniers articles</h2>
+        <div class="filters">
+          <button class="chip active" data-filter="all" type="button">Tous</button>
+          <button class="chip" data-filter="guides" type="button">Guides</button>
+          <button class="chip" data-filter="outils" type="button">Outils</button>
+          <button class="chip" data-filter="veille" type="button">Veille</button>
+          <button class="chip" data-filter="cas" type="button">Cas pratiques</button>
+        </div>
+
+        <div class="cards" id="post-grid">
+          <article class="card" data-cat="cas">
+            <h3>Automatiser la relance client</h3>
+            <p>Exemple d’agent IA + email type pour TPE.</p>
+            <div class="meta">6 min • Cas pratique</div>
+          </article>
+          <article class="card" data-cat="outils">
+            <h3>Top 10 outils IA</h3>
+            <p>Des outils simples pour démarrer sans complexe.</p>
+            <div class="meta">8 min • Outils</div>
+          </article>
+          <article class="card" data-cat="veille">
+            <h3>Veille IA — Semaine</h3>
+            <p>Ce qu’il faut retenir pour décider vite.</p>
+            <div class="meta">4 min • Veille</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Entreprises de l'IA (placeholder pour future page) -->
+    <section id="entreprises" class="section brands">
+      <div class="container">
+        <h2>Entreprises de l’IA (aperçu)</h2>
+        <p class="muted">Cette section deviendra une page dédiée. Aperçu de quelques catégories :</p>
+        <div class="cards">
+          <div class="card"><h3>Intégrateurs & services</h3><p>Accompagnement, audit, formations.</p></div>
+          <div class="card"><h3>Outils low-code</h3><p>Automatisation, connecteurs, RPA léger.</p></div>
+          <div class="card"><h3>Modèles & APIs</h3><p>LLMs, vision, speech, embeddings.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section newsletter">
+      <div class="container">
+        <div class="box">
+          <div class="box-text">
+            <h3>Recevoir la veille IA utile (hebdo)</h3>
+            <p>Un résumé actionnable pour TPE & indépendants.</p>
+          </div>
+          <form id="newsletter-form" class="box-form" novalidate>
+            <label class="visually-hidden" for="nl-email">Email</label>
+            <input id="nl-email" type="email" placeholder="Votre email" required />
+            <button class="btn btn-primary" type="submit">S’inscrire</button>
+            <p class="help" id="nl-help">Aucune pub. Désinscription en un clic.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section contact">
+      <div class="container">
+        <h2>Contact / Démo</h2>
+        <form id="contact-form" novalidate>
+          <div class="row two">
+            <div class="form-field">
+              <label for="name">Nom</label>
+              <input id="name" type="text" placeholder="Votre nom" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="prenom@exemple.com" required />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="subject">Sujet</label>
+            <input id="subject" type="text" placeholder="Ex. Démo automatisations TPE" />
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Décrivez votre besoin"></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Envoyer</button>
+          <p class="help">Réponse sous 24–48h ouvrées.</p>
+          <div class="alert alert-success visually-hidden" id="contact-success" role="status">Merci ! Votre demande a été envoyée.</div>
+          <div class="alert alert-error visually-hidden" id="contact-error" role="alert">Erreur d’envoi. Réessayez plus tard.</div>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer container -->
+  <div id="footer-container"></div>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>

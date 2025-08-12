@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact & Démo — Blog IA</title>
+  <meta name="description" content="Contactez-nous pour une démo personnalisée ou des questions sur l'IA appliquée aux TPE et indépendants.">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="page-contact">
+  <a class="skip-link" href="#main">Aller au contenu</a>
+
+  <!-- Header container -->
+  <div id="header-container"></div>
+
+  <main id="main">
+    <!-- Hero -->
+    <section class="section hero">
+      <div class="container">
+        <h1>Contact & Démo</h1>
+        <p class="lead">
+          Besoin d'aide pour <strong>implémenter l'IA</strong> dans votre activité ? 
+          Demandez une démo personnalisée ou posez vos questions.
+        </p>
+      </div>
+    </section>
+
+    <!-- Contact form -->
+    <section class="section contact">
+      <div class="container">
+        <h2>Parlons de votre projet</h2>
+        <form id="contact-form" novalidate>
+          <div class="row two">
+            <div class="form-field">
+              <label for="name">Nom</label>
+              <input id="name" type="text" placeholder="Votre nom" required />
+            </div>
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input id="email" type="email" placeholder="prenom@exemple.com" required />
+            </div>
+          </div>
+          <div class="form-field">
+            <label for="subject">Sujet</label>
+            <input id="subject" type="text" placeholder="Ex. Démo automatisations TPE" />
+          </div>
+          <div class="form-field">
+            <label for="message">Message</label>
+            <textarea id="message" rows="4" placeholder="Décrivez votre besoin : secteur d'activité, processus à automatiser, objectifs..."></textarea>
+          </div>
+          <button class="btn btn-primary" type="submit">Envoyer</button>
+          <p class="help">Réponse sous 24–48h ouvrées.</p>
+          <div class="alert alert-success visually-hidden" id="contact-success" role="status">Merci ! Votre demande a été envoyée.</div>
+          <div class="alert alert-error visually-hidden" id="contact-error" role="alert">Erreur d'envoi. Réessayez plus tard.</div>
+        </form>
+      </div>
+    </section>
+
+    <!-- Info section -->
+    <section class="section features">
+      <div class="container">
+        <h2>Nos services</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Audit IA</h3>
+            <p>Analyse de vos processus et identification des opportunités d'automatisation prioritaires.</p>
+            <div class="meta">Diagnostic gratuit</div>
+          </article>
+          <article class="card">
+            <h3>Formation</h3>
+            <p>Accompagnement personnalisé pour maîtriser les outils IA adaptés à votre activité.</p>
+            <div class="meta">Sur-mesure</div>
+          </article>
+          <article class="card">
+            <h3>Implémentation</h3>
+            <p>Mise en place concrète d'automatisations et d'assistants IA pour votre entreprise.</p>
+            <div class="meta">Clé en main</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="section newsletter">
+      <div class="container">
+        <div class="box">
+          <div class="box-text">
+            <h3>Recevoir la veille IA utile (hebdo)</h3>
+            <p>Un résumé actionnable pour TPE & indépendants.</p>
+          </div>
+          <form id="newsletter-form" class="box-form" novalidate>
+            <label class="visually-hidden" for="nl-email">Email</label>
+            <input id="nl-email" type="email" placeholder="Votre email" required />
+            <button class="btn btn-primary" type="submit">S'inscrire</button>
+            <p class="help" id="nl-help">Aucune pub. Désinscription en un clic.</p>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer container -->
+  <div id="footer-container"></div>
+
+  <script src="assets/js/app.js" defer></script>
+</body>
+</html>
