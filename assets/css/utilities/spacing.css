@@ -1,0 +1,26 @@
+/* ===== Spacing & Section Utilities ===== */
+
+/* ===== Hero ===== */
+.hero .lead { margin: var(--space-4) 0; }
+.hero .cta { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+
+/* ===== Filters (chips) ===== */
+.filters { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-4); }
+.chip {
+  background: transparent; border: 1px solid rgba(255,255,255,0.14);
+  color: var(--color-text-secondary); padding: 8px 12px; border-radius: var(--radius-pill);
+  cursor: pointer; font-family: 'Poppins', sans-serif;
+}
+.chip.active, .chip:hover { border-color: var(--color-primary); color: var(--color-text); }
+
+/* ===== Newsletter ===== */
+.newsletter .box {
+  display: grid; gap: var(--space-4);
+  grid-template-columns: 1fr;
+  background: #0b0f14; border: var(--border-soft);
+  border-radius: var(--radius-lg);
+  padding: var(--space-5);
+}
+@media (min-width: 640px) { .newsletter .box { grid-template-columns: 1.4fr 1fr; align-items: center; } }
+.box-form { display: grid; gap: var(--space-3); grid-template-columns: 1fr auto; align-items: center; }
+.box-form input { min-width: 200px; }

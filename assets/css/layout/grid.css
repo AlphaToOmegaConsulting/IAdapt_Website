@@ -1,0 +1,6 @@
+/* ===== Layout Grid & Utilities ===== */
+.container { max-width: var(--container); margin: 0 auto; padding: 0 var(--space-5); }
+.section { padding: var(--space-8) 0; }
+.row { display: grid; gap: var(--space-5); }
+.row.two { grid-template-columns: 1fr; }
+@media (min-width: 640px) { .row.two { grid-template-columns: repeat(2,1fr); } }
