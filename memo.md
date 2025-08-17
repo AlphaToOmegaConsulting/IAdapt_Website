@@ -15,10 +15,18 @@ Expert de confiance accompagnant les PME toulousaines dans leur transformation n
 
 ## Architecture du Site
 
-### Structure technique
-- **Technologie** : Site statique HTML/CSS/JavaScript
-- **Hébergement** : GitHub Pages
+### Structure technique moderne
+- **Technologie** : Architecture CSS modulaire avec Cascade Layers + JavaScript vanilla
+- **Build System** : PostCSS avec compilation automatique (postcss-import + cssnano)
+- **Output** : CSS unique optimisé (`site.css`) + JavaScript namespace pattern
+- **Hébergement** : GitHub Pages avec déploiement automatisé
 - **Domaine** : iadapt.app (déjà réservé)
+
+### Avantages techniques
+- **Performance** : CSS compilé et minifié automatiquement
+- **Maintenabilité** : Sources de vérité modulaires et documentées
+- **Évolutivité** : Ajout simple de nouveaux composants
+- **Développement** : Build pipeline avec mode surveillance (`npm run watch`)
 
 ### Organisation du contenu
 
@@ -34,13 +42,13 @@ Présentation des acteurs créateurs de modèles IA :
 - Microsoft
 - Hugging Face
 
-#### 3. Section Outils (outil.html)
+#### 3. Section Outils (outils.html)
 Écosystème technique d'intégration et développement :
 - N8N (automatisation)
 - VS Code (développement)
 - GitHub (versioning/collaboration)
 
-#### 4. Section Applications (application.html)
+#### 4. Section Applications (applications.html)
 Cas d'usage métier concrets :
 - Solutions email
 - CRM
@@ -49,6 +57,13 @@ Cas d'usage métier concrets :
 
 #### 5. Contact (contact.html)
 Point de conversion pour les prospects intéressés par les services
+
+#### 6. Documentation Technique (composants.html)
+Bibliothèque de composants interne :
+- Système de design (44 variables CSS)
+- Composants UI documentés (boutons, cartes, accordéons, etc.)
+- Guide JavaScript (IAdaptUtils, IAdaptApp, IAdaptComponents)
+- Référentiel pour le développement et la maintenance
 
 ## Parcours Utilisateur
 
@@ -71,6 +86,39 @@ Point de conversion pour les prospects intéressés par les services
 - Démonstration de transparence et pédagogie
 - Évaluation de l'expertise avant contact commercial
 
+## Architecture Technique Avancée
+
+### CSS Modulaire avec Cascade Layers
+```
+@layer tokens, base, layout, components, utilities, overrides;
+```
+- **tokens.css** : 44 variables design system (couleurs, espacements, typographie)
+- **base.css** : Reset CSS + typographie de base
+- **layout.css** : Grilles, containers, hero, système de mise en page
+- **components/** : Boutons, cartes, header, footer, accordéons, media-grid
+- **utilities.css** : Classes d'aide, spacing, text, accessibilité
+- **responsive.css** : Media queries globales
+
+### Build Pipeline PostCSS
+```bash
+npm run build    # Production optimisée
+npm run watch    # Développement continu
+```
+- **Entrée** : `styles/index.css` avec imports organisés
+- **Sortie** : `site.css` compilé, minifié et optimisé
+- **Plugins** : postcss-import (résolution @import) + cssnano (minification)
+
+### JavaScript Pattern Namespace
+- **IAdaptUtils** : Debounce, throttle, DOM helpers, animations (`scripts/utils.js`)
+- **IAdaptApp** : Navigation, scroll, état global, configuration (`scripts/main.js`)
+- **IAdaptComponents** : Accordéons, filtres, interactions (`scripts/components.js`)
+
+### Workflow de Développement
+1. **Modification CSS** : Éditer `styles/` → `npm run build` → `site.css` mis à jour
+2. **Nouveau composant** : Identifier catégorie → créer/modifier fichier source de vérité
+3. **Debug** : Vérifier ordre CSS Cascade Layers → sources de vérité uniques
+4. **Documentation** : Référencer dans `composants.html` + `ARCHITECTURE.md`
+
 ## Facteurs Clés de Succès
 
 - **Qualité du contenu** : Équilibre entre accessibilité et expertise technique
@@ -80,8 +128,20 @@ Point de conversion pour les prospects intéressés par les services
 
 ## Prochaines Étapes
 
-1. Développement de la structure HTML/CSS responsive
-2. Rédaction du contenu pour chaque section
-3. Optimisation SEO et performance
-4. Déploiement sur GitHub Pages
-5. Stratégie de promotion initiale
+### Phase 1 : Optimisation Technique ✅ **TERMINÉE**
+1. ✅ Migration vers architecture CSS modulaire avec Cascade Layers
+2. ✅ Implémentation du build pipeline PostCSS automatisé
+3. ✅ Refactorisation JavaScript vers pattern namespace
+4. ✅ Documentation complète de l'architecture (ARCHITECTURE.md, CLAUDE.md)
+
+### Phase 2 : Amélioration Continue
+1. **Expansion de contenu** : Rédaction d'articles pour chaque section
+2. **Optimisation SEO** : Meta tags, structure sémantique, performance
+3. **Tests & Validation** : Accessibilité WCAG AA, tests multi-navigateurs
+4. **Monitoring** : Mise en place analytics et suivi conversion
+
+### Phase 3 : Évolution
+1. **Composants avancés** : Ajout d'accordéons, filtres, animations
+2. **Intégrations** : Formulaires Tally, newsletter, CRM
+3. **Performance** : Optimisation images, lazy loading, PWA
+4. **Stratégie promotion** : SEO local "IA Toulouse", réseaux sociaux
