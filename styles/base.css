@@ -1,0 +1,42 @@
+/* ===== Reset & Base Styles ===== */
+
+/* Reset basics */
+* { box-sizing: border-box; }
+html, body { height: 100%; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: 'Roboto', sans-serif;
+}
+img { max-width: 100%; display: block; }
+
+/* Typography */
+h1, h2, h3 {
+  font-family: 'Poppins', sans-serif;
+  margin: 0 0 var(--space-4);
+}
+h1 { font-size: var(--fs-5); }
+h2 { font-size: var(--fs-4); }
+h3 { font-size: var(--fs-3); }
+p { font-size: var(--fs-2); line-height: 1.65; color: var(--color-text-secondary); }
+.lead { font-size: clamp(1.125rem, 1rem + 0.6vw, 1.4rem); }
+
+.muted { color: var(--color-text-secondary); }
+
+/* Skip links for accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 8px;
+  background: var(--color-primary);
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+}
+
+.skip-link:focus {
+  top: 8px;
+}

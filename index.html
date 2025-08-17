@@ -6,13 +6,31 @@
   <title>Blog IA — TPE & Indépendants</title>
   <meta name="description" content="Blog spécialisé sur l'IA appliquée aux TPE et indépendants : guides, outils, cas concrets.">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="site.css" />
 </head>
 <body class="page-home">
   <a class="skip-link" href="#main">Aller au contenu</a>
 
-  <!-- Header container -->
-  <div id="header-container"></div>
+  <!-- Header -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <a class="brand-title" href="index.html" aria-label="Blog IA - Accueil">Blog IA</a>
+      </div>
+
+      <nav class="nav-links" id="nav-links" aria-label="Navigation principale">
+        <a href="index.html" class="nav-home">Accueil</a>
+        <a href="entreprises.html" class="nav-entreprises">Entreprises de l'IA</a>
+        <a href="applications.html" class="nav-applications">Applications</a>
+        <a href="contact.html" class="nav-contact">Contact</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+        ☰
+      </button>
+    </div>
+  </header>
 
   <main id="main">
     <!-- Hero -->
@@ -114,9 +132,98 @@
     </section>
   </main>
 
-  <!-- Footer container -->
-  <div id="footer-container"></div>
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        
+        <!-- Section principale avec brand -->
+        <div class="footer-main">
+          <div class="footer-brand">
+            <div class="footer-logo">IA</div>
+            <div class="footer-brand-text">IADapt</div>
+          </div>
+          
+          <p class="footer-tagline">
+            Accompagnement IA pour TPE toulousaines.<br>
+            Guides pratiques, outils simples, résultats concrets.
+          </p>
 
-  <script src="assets/js/main.js" type="module"></script>
+          <!-- Réseaux sociaux -->
+          <div class="social-links">
+            <a href="https://linkedin.com/company/iadapt" class="social-link" aria-label="LinkedIn IADapt">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+            </a>
+            <a href="https://github.com/iadapt" class="social-link" aria-label="GitHub IADapt">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Navigation -->
+        <div class="footer-section">
+          <h3 class="footer-section-title">Navigation</h3>
+          <nav class="footer-links" aria-label="Navigation footer">
+            <a href="/entreprises.html" class="footer-link">Entreprises IA</a>
+            <a href="/outils.html" class="footer-link">Outils & Intégration</a>
+            <a href="/applications.html" class="footer-link">Applications métier</a>
+            <a href="#posts" class="footer-link">Articles populaires</a>
+          </nav>
+        </div>
+
+        <!-- Ressources -->
+        <div class="footer-section">
+          <h3 class="footer-section-title">Ressources</h3>
+          <nav class="footer-links" aria-label="Ressources">
+            <a href="/guides/" class="footer-link">Guides débutants</a>
+            <a href="/faq.html" class="footer-link">FAQ IA pour TPE</a>
+            <a href="/glossaire.html" class="footer-link">Glossaire IA</a>
+            <a href="/veille/" class="footer-link">Archives veille</a>
+            <a href="/cas-usage/" class="footer-link">Cas d'usage</a>
+          </nav>
+          
+          <div class="contact-info">
+            <div class="contact-item">
+              <svg class="contact-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+              </svg>
+              <span>Toulouse & Occitanie + visio</span>
+            </div>
+            <div class="badge">
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/>
+              </svg>
+              Ambassadeur Toulouse
+            </div>
+          </div>
+
+          <div class="footer-cta">
+            <a href="/contact.html" class="btn btn-secondary">Contact</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Footer bottom -->
+      <div class="footer-bottom">
+        <div class="footer-bottom-text">
+          © 2025 IADapt.app • IA accessible aux TPE
+        </div>
+        <nav class="footer-bottom-links" aria-label="Liens légaux">
+          <a href="/mentions-legales.html" class="footer-bottom-link">Mentions légales</a>
+          <a href="/confidentialite.html" class="footer-bottom-link">Confidentialité</a>
+          <a href="/plan-site.html" class="footer-bottom-link">Plan du site</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/components.js"></script>
 </body>
 </html>

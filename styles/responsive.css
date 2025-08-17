@@ -1,0 +1,51 @@
+/* ===== Responsive Utilities ===== */
+
+/* Responsive typography adjustments */
+@media (max-width: 639px) {
+  .hero h1 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    line-height: 1.2;
+  }
+  
+  .hero .lead {
+    font-size: var(--fs-2);
+  }
+}
+
+/* Mobile-specific adjustments */
+@media (max-width: 767px) {
+  .container {
+    padding: 0 var(--space-4);
+  }
+  
+  .section {
+    padding: var(--space-4) 0;
+  }
+  
+  .cta {
+    width: 100%;
+  }
+  
+  .cta .btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* Tablet adjustments */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    padding: 0 var(--space-5);
+  }
+}
+
+/* Large screen optimizations */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1200px;
+  }
+  
+  .section {
+    padding: var(--space-7) 0;
+  }
+}

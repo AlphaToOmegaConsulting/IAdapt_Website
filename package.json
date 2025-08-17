@@ -1,0 +1,27 @@
+{
+  "name": "iadapt-blog",
+  "version": "1.0.0",
+  "description": "Blog IA pour TPE - Architecture CSS modulaire avec build pipeline",
+  "private": true,
+  "scripts": {
+    "build": "postcss styles/index.css -o site.css",
+    "watch": "postcss styles/index.css -o site.css --watch",
+    "build:verbose": "postcss styles/index.css -o site.css --verbose"
+  },
+  "devDependencies": {
+    "postcss": "^8.4.31",
+    "postcss-cli": "^10.1.0",
+    "postcss-import": "^15.1.0",
+    "cssnano": "^6.0.1"
+  },
+  "keywords": [
+    "ia",
+    "tpe",
+    "blog",
+    "css",
+    "postcss",
+    "cascade-layers"
+  ],
+  "author": "IAdapt",
+  "license": "MIT"
+}

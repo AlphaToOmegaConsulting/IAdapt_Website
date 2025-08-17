@@ -6,13 +6,31 @@
   <title>Entreprises de l'IA — Blog IA</title>
   <meta name="description" content="Découvrez les principales entreprises et acteurs de l'intelligence artificielle pour TPE et indépendants.">
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/main.css" />
+  <link rel="stylesheet" href="site.css" />
 </head>
 <body class="page-entreprises">
   <a class="skip-link" href="#main">Aller au contenu</a>
 
-  <!-- Header container -->
-  <div id="header-container"></div>
+  <!-- Header -->
+  <header class="navbar" id="navbar">
+    <div class="container">
+      <div class="brand">
+        <span class="logo" aria-hidden="true"></span>
+        <a class="brand-title" href="index.html" aria-label="Blog IA - Accueil">Blog IA</a>
+      </div>
+
+      <nav class="nav-links" id="nav-links" aria-label="Navigation principale">
+        <a href="index.html" class="nav-home">Accueil</a>
+        <a href="entreprises.html" class="nav-entreprises">Entreprises de l'IA</a>
+        <a href="applications.html" class="nav-applications">Applications</a>
+        <a href="contact.html" class="nav-contact">Contact</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-expanded="false" aria-controls="nav-links" aria-label="Ouvrir le menu">
+        ☰
+      </button>
+    </div>
+  </header>
 
   <main id="main">
     <!-- Hero -->
@@ -56,6 +74,8 @@
   <!-- Footer container -->
   <div id="footer-container"></div>
 
-  <script src="assets/js/main.js" type="module"></script>
+  <script src="scripts/utils.js"></script>
+  <script src="scripts/main.js"></script>
+  <script src="scripts/components.js"></script>
 </body>
 </html>

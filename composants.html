@@ -163,6 +163,43 @@
         </div>
       </section>
 
+      <!-- Grilles média -->
+      <section class="section">
+        <h2>Grilles média 60/40</h2>
+        <p>Présentation équilibrée contenu/visuel avec alternance responsive</p>
+
+        <div class="media-grid">
+          <div class="media-grid__content">
+            <h3>Contenu à gauche, média à droite</h3>
+            <p>Grille responsive qui répartit l'espace 60% pour le contenu textuel et 40% pour le média sur desktop (≥768px).</p>
+            <p>Sur mobile, la grille s'empile verticalement avec le média affiché en premier pour capter l'attention.</p>
+          </div>
+          <div class="media-grid__media">
+            <img src="img/1.png" alt="Exemple de contenu média">
+          </div>
+        </div>
+
+        <div class="media-grid media-grid--reverse">
+          <div class="media-grid__content">
+            <h3>Variante reverse : média à gauche</h3>
+            <p>Avec la classe <code>.media-grid--reverse</code>, l'ordre s'inverse sur desktop pour créer une alternance visuelle.</p>
+            <p>Variables utilisées : <code>--space-5</code> (mobile), <code>--space-6</code> (desktop), <code>--radius-md</code>, <code>--elev-1</code> et <code>--elev-2</code>.</p>
+          </div>
+          <div class="media-grid__media">
+            <img src="img/2.png" alt="Layout inversé">
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Classes disponibles</h3>
+          <p><strong>.media-grid</strong> : Container principal<br>
+          <strong>.media-grid__content</strong> : Zone de contenu textuel (60%)<br>
+          <strong>.media-grid__media</strong> : Zone média (40%)<br>
+          <strong>.media-grid--reverse</strong> : Modifier pour inverser l'ordre</p>
+          <div class="meta">Support images + vidéos, hover effects intégrés</div>
+        </div>
+      </section>
+
       <!-- Alertes -->
       <section class="section">
         <h2>Système d'alertes</h2>
@@ -179,6 +216,69 @@
         </div>
         <div class="alert alert-error">
           <strong>Erreur</strong> Message d'erreur avec .alert-error
+        </div>
+      </section>
+
+      <!-- Accordéons -->
+      <section class="section">
+        <h2>Système d'accordéons</h2>
+        <p>Composant interactif pour FAQ, guides step-by-step, comparatifs</p>
+
+        <div class="accordion">
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              <span>Comment fonctionne l'animation des accordéons ?</span>
+              <span class="accordion__icon">›</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__body">
+                <p>L'animation utilise <code>max-height</code> avec une transition CSS de 0.3s ease. L'icône chevron effectue une rotation de 90° lors de l'ouverture.</p>
+                <p>Le JavaScript calcule dynamiquement la hauteur du contenu pour une animation fluide.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion__item">
+            <button class="accordion__trigger" aria-expanded="false">
+              <span>Quelles sont les fonctionnalités d'accessibilité ?</span>
+              <span class="accordion__icon">›</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__body">
+                <p>Support complet du clavier :</p>
+                <ul>
+                  <li><strong>Enter</strong> et <strong>Espace</strong> : Ouvrir/fermer</li>
+                  <li><strong>aria-expanded</strong> : État communiqué aux lecteurs d'écran</li>
+                  <li><strong>Focus visible</strong> : Outline bleu clair sur focus</li>
+                </ul>
+                <p>Respecte <code>prefers-reduced-motion</code> pour désactiver les animations si nécessaire.</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="accordion__item accordion__item--open">
+            <button class="accordion__trigger" aria-expanded="true">
+              <span>Cet item est ouvert par défaut</span>
+              <span class="accordion__icon">›</span>
+            </button>
+            <div class="accordion__content">
+              <div class="accordion__body">
+                <p>Pour ouvrir un accordéon par défaut, ajoutez la classe <code>.accordion__item--open</code> et définissez <code>aria-expanded="true"</code>.</p>
+                <p>Le comportement par défaut ferme automatiquement les autres items (comportement exclusif).</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <h3>Structure & classes</h3>
+          <p><strong>.accordion</strong> : Container principal<br>
+          <strong>.accordion__item</strong> : Item individuel<br>
+          <strong>.accordion__trigger</strong> : Bouton déclencheur<br>
+          <strong>.accordion__content</strong> : Zone de contenu<br>
+          <strong>.accordion__body</strong> : Contenu interne avec padding<br>
+          <strong>.accordion__icon</strong> : Icône chevron (rotation automatique)</p>
+          <div class="meta">JavaScript requis : initAccordions()</div>
         </div>
       </section>
 
@@ -220,7 +320,7 @@
       <!-- JavaScript -->
       <section class="section">
         <h2>Fonctions JavaScript disponibles</h2>
-        <p>21 fonctions exportées dans 6 modules ES6</p>
+        <p>22 fonctions exportées dans 7 modules ES6</p>
 
         <div class="cards">
           <div class="card">
@@ -242,6 +342,11 @@
             <p><strong>initAnimations</strong><br>
             <strong>fadeIn</strong><br>
             <strong>slideDown</strong></p>
+          </div>
+          <div class="card">
+            <h3>Accordéons (1)</h3>
+            <p><strong>initAccordions</strong><br>
+            Gestion expand/collapse, clavier, accessibilité</p>
           </div>
           <div class="card">
             <h3>System Core (4)</h3>

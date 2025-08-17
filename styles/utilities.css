@@ -1,0 +1,51 @@
+/* ===== Utilities ===== */
+
+/* Spacing & Section Utilities */
+.hero .lead { margin: var(--space-4) 0; }
+.hero .cta { display: flex; gap: var(--space-3); flex-wrap: wrap; }
+
+/* Filters (chips) */
+.filters { display: flex; gap: var(--space-2); flex-wrap: wrap; margin-bottom: var(--space-4); }
+.chip {
+  background: transparent; border: 1px solid rgba(255,255,255,0.14);
+  color: var(--color-text-secondary); padding: 8px 12px; border-radius: var(--radius-pill);
+  cursor: pointer; font-family: 'Poppins', sans-serif;
+}
+.chip.active, .chip:hover { border-color: var(--color-primary); color: var(--color-text); }
+
+/* Text utilities */
+.text-center { text-align: center; }
+.text-left { text-align: left; }
+.text-right { text-align: right; }
+
+/* Margin utilities */
+.mt-1 { margin-top: var(--space-1); }
+.mt-2 { margin-top: var(--space-2); }
+.mt-3 { margin-top: var(--space-3); }
+.mt-4 { margin-top: var(--space-4); }
+.mt-5 { margin-top: var(--space-5); }
+
+.mb-1 { margin-bottom: var(--space-1); }
+.mb-2 { margin-bottom: var(--space-2); }
+.mb-3 { margin-bottom: var(--space-3); }
+.mb-4 { margin-bottom: var(--space-4); }
+.mb-5 { margin-bottom: var(--space-5); }
+
+/* Visibility */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
+
+/* Focus visible */
+:focus-visible {
+  outline: 2px solid var(--color-secondary);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  * { transition: none !important; animation: none !important; }
+}
